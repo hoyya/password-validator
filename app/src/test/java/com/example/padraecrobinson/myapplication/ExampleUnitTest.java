@@ -17,6 +17,12 @@ public class ExampleUnitTest {
 
 
     @Test
+    public void T_validate() throws Exception{
+        assertEquals(2,for_test.validate(password_sample));
+
+    }
+
+    @Test
     public void T_not_password() throws Exception{
         assertTrue(for_test.not_password(password_sample));
 
