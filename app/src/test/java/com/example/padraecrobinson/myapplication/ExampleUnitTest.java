@@ -10,8 +10,23 @@ import static org.junit.Assert.*;
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
 public class ExampleUnitTest {
+
+    Validator for_test = new Validator();
+
+    String password_sample = "pasasWord";
+
+
     @Test
-    public void addition_isCorrect() throws Exception {
-        assertEquals(4, 2 + 2);
+    public void T_not_password() throws Exception{
+        assertTrue(for_test.not_password(password_sample));
+
     }
+
+    @Test
+    public void T_min_length() throws Exception{
+        assertTrue(for_test.min_length(password_sample));
+    }
+
+
+
 }
