@@ -1,8 +1,6 @@
 package com.example.padraecrobinson.myapplication;
 
 
-import android.content.Context;
-import android.support.test.InstrumentationRegistry;
 import android.support.test.filters.LargeTest;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
@@ -18,7 +16,7 @@ import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
 import static android.support.test.espresso.action.ViewActions.typeText;
 import static android.support.test.espresso.action.ViewActions.click;
-import static org.junit.Assert.*;
+
 
 /**
  * Instrumented test, which will execute on an Android device.
@@ -48,7 +46,7 @@ public class ExampleInstrumentedTest {
 
     }
 
-    @Test
+    @Test //this one should fail
     public void test_pass_1() throws Exception {
         onView(withId(R.id.input_box)).perform(typeText(pass_1));
         onView(withId(R.id.button)).perform(click());
@@ -56,28 +54,28 @@ public class ExampleInstrumentedTest {
 
     }
 
-    @Test
+    @Test //this one should fail
     public void test_pass_2() throws Exception {
         onView(withId(R.id.input_box)).perform(typeText(pass_2));
         onView(withId(R.id.button)).perform(click());
         onView(withId(R.id.output_box)).check(matches(withText("Password is bad")));
     }
 
-    @Test
+    @Test //this one should pass
     public void test_pass_3() throws Exception {
         onView(withId(R.id.input_box)).perform(typeText(pass_3));
         onView(withId(R.id.button)).perform(click());
         onView(withId(R.id.output_box)).check(matches(withText("Password is good")));
     }
 
-    @Test
+    @Test //this one should fail
     public void test_pass_4() throws Exception {
         onView(withId(R.id.input_box)).perform(typeText(pass_4));
         onView(withId(R.id.button)).perform(click());
         onView(withId(R.id.output_box)).check(matches(withText("Password is bad")));
     }
 
-    @Test
+    @Test //this one should fail
     public void test_pass_5() throws Exception {
         onView(withId(R.id.input_box)).perform(typeText(pass_5));
         onView(withId(R.id.button)).perform(click());
