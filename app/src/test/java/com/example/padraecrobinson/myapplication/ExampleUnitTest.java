@@ -13,8 +13,14 @@ public class ExampleUnitTest {
 
     Validator for_test = new Validator();
 
-    String password_sample = "pasasWord";
+    String password_sample = "pasas1Wor^d";
 
+
+    @Test
+    public void T_validate() throws Exception{
+        assertEquals(5,for_test.validate(password_sample));
+
+    }
 
     @Test
     public void T_not_password() throws Exception{
