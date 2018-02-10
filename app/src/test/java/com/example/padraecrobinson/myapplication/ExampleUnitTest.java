@@ -18,7 +18,9 @@ public class ExampleUnitTest {
 
     @Test
     public void T_validate() throws Exception{
+
         assertEquals(5,for_test.validate(password_sample));
+
 
     }
 
