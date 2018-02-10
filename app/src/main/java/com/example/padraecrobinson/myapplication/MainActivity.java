@@ -14,8 +14,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         final Button button = findViewById(R.id.button);
-        final EditText input = (EditText) findViewById(R.id.input_box);
-        final TextView output = (TextView) findViewById(R.id.output_box);
+        final EditText input = findViewById(R.id.input_box);
+        final TextView output =  findViewById(R.id.output_box);
 
         button.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
